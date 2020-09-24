@@ -46,7 +46,9 @@ Please try to follow these guidelines:
 
 ## How to Contribute
 
-> **Note:** If you've never made a pull request before, or participated in an open-source project, we recommend taking a look at this [wonderful video tutorial](https://youtu.be/ZI2D0CI4TXs). And if you want a more complete tutorial on using github, creating branches etc. , [here's a detailed video series](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR).Once you've got your feet wet, you're ready to come back and dive into Hacktoberfest fun!
+> **Note 1:** If you've never made a pull request before, or participated in an open-source project, we recommend taking a look at this [wonderful video tutorial](https://youtu.be/ZI2D0CI4TXs). And if you want a more complete tutorial on using github, creating branches etc. , [here's a detailed video series](https://www.youtube.com/watch?v=3RjQznt-8kE&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR).Once you've got your feet wet, you're ready to come back and dive into Hacktoberfest fun!
+
+> **Note 2:** **Super Important** Only the pull requests created between October 1st, 2020 and October 31st, 2020 will be counted!
 
 1.  First up you need to fork (make a copy) of this repo to your Github account.
 2.  Clone (download) your fork to your computer.
@@ -55,7 +57,7 @@ Please try to follow these guidelines:
     - [ ] <code>git pull upstream master</code>
     - [ ] The above 2 commands will synchronize your forked version of the project with the actual repository.
 4.  Create a branch with your name (for e.g: if your name is John Wick, create a branch named `John_Wick`).
-5.  Make the changes.
+5.  Make the changes in your branch.
 6.  Commit and push the code to YOUR fork.
 7.  Create a pull request to have the changes merged into the origin.
 
