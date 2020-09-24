@@ -1,4 +1,4 @@
-# My SpaceX Console - Hacktoberfest 2020
+# My SpaceX Console
 
 ![spacex wallpaper](https://raw.githubusercontent.com/AdityaPratap006/My-SpaceX-Console/master/readme-image.jpg)
 Hi! Welcome to this beginner-friendly **Frontend Engineering** challenge for [Hactoberfest](https://hacktoberfest.digitalocean.com/). A project focused on people getting started with frontend development with **React** where one can build a very cool personal [SpaceX](https://www.spacex.com/) launch tracker.
