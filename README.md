@@ -78,11 +78,11 @@ Please try to follow these guidelines:
 
 4. Set your streams so you can sync your clone with the original repo (get the latest updates)
 
-- [ ] <code>git remote add upstream https://github.com/NITJSR-OSS/My-SpaceX-Console.git</code>
+  - [ ] <code>git remote add upstream https://github.com/NITJSR-OSS/My-SpaceX-Console.git</code>
 
-- [ ] <code>git pull upstream master</code>
+  - [ ] <code>git pull upstream master</code>
 
-- [ ] The above 2 commands will synchronize your forked version of the project with the actual repository.
+  - [ ] The above 2 commands will synchronize your forked version of the project with the actual repository.
 
 5. Create a branch with your name (for e.g: if your name is John Wick, create a branch named `John_Wick`).
 
