@@ -28,9 +28,9 @@ Using the apis and tools given below, try to implement the following features:
 
 - [ ] A launches screen, where th user can view the list of all the launches. :rocket:
 
-- Divide this into 3 sections.
+  - Divide this into 3 sections.
 
-- One section for upcoming launches, one for latest launches and one for past launches.
+  - One section for upcoming launches, one for latest launches and one for past launches.
 
 - [ ] A launch detail screen, where the user can view all the details of a particular launch. :chart:
 
