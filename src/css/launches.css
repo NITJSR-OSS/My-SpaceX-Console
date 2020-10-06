@@ -1,0 +1,16 @@
+/* -------------------launches screen---------------------------------------- */
+
+.launches-box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  
+  }
+  
+  .launches{
+    height: 80vh;
+    width: 400px;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    max-width: 93%;
+  }

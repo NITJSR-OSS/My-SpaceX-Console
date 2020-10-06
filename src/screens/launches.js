@@ -1,6 +1,9 @@
 import React from 'react'
 import LatestLaunches from '../components/latest-launches'
-import UpcomingLaunches from '../components/upcoming-aunches'
+import PastLaunches from '../components/past-launches'
+import UpcomingLaunches from '../components/upcoming-launches'
+
+import '../css/launches.css'
 
 export default function Launches() {
     return (
@@ -9,7 +12,7 @@ export default function Launches() {
 
         <div className='launches-box'>
             
-            <UpcomingLaunches />
+            <PastLaunches />
             <LatestLaunches />
             <UpcomingLaunches />
                    
