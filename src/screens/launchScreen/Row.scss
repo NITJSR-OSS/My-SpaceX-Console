@@ -1,0 +1,28 @@
+.launch-row{
+    color: white;
+    margin-left: 20px;
+}
+.row-body{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+/* Hiding scrollBar */
+.row-body::-webkit-scrollbar{
+    display: none;
+}
+
+
+.launch-card{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row-card:hover{
+    transform: scale(1.08);
+}
