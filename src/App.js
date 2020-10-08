@@ -3,7 +3,7 @@ import './App.scss';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Home from './screens/homeScreen/Home';
 import Launch from './screens/launchScreen/Launch';
-import Sidebar from './Sidebar';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   return (

@@ -22,14 +22,11 @@ function Row({title,url}) {
                 {
                     (title === 'Latest Launch' || title === 'Next Launch') && (
                         <div className='launch-card'>
-                            <img src='' alt=''></img>
                             <div className='launch-info'>
                                 <h2>{launchList?.name}</h2>
-                                <h2>{launchList?.date_utc}</h2>
                                 {
-                                    launchList?.success? (<h2>Success</h2>):(<h2>{title !== 'Next Launch' || title === 'Upcoming Launch'? <>Failure</>:<></>}</h2>)
+                                    launchList?.success? (<h2 style={{color:'green'}}>Success</h2>):(<h2  style={{color:'red'}}>{title !== 'Next Launch' && title !== 'Upcoming Launches'? <>Failure</>:<></>}</h2>)
                                 }
-
                             </div>
                         </div>
                     )
@@ -42,7 +39,9 @@ function Row({title,url}) {
                             <img src='' alt=''></img>
                             <div className='launch-info'>
                                 <h2>{launch.name}</h2>
-                                <h2>{launch.date_utc}</h2>
+                                {
+                                    launch?.success? (<h2 style={{color:'green'}}>Success</h2>):(<h2  style={{color:'red'}}>{title !== 'Next Launch' && title !== 'Upcoming Launches'? <>Failure</>:<></>}</h2>)
+                                }
                             </div>
                         </div>
                     )))

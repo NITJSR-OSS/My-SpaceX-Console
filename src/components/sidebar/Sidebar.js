@@ -1,8 +1,8 @@
 import React from 'react'
 import './Sidebar.scss'
-import logo from './assets/logo.svg'
+import logo from '../../assets/logo.svg'
 import { NavLink } from 'react-router-dom';
-import { AppsRounded, ExtensionRounded, HomeRounded, SettingsApplicationsOutlined, SettingsApplicationsRounded } from '@material-ui/icons';
+import { AppsRounded, ExtensionRounded, HomeRounded, SettingsApplicationsOutlined} from '@material-ui/icons';
 
 function Sidebar() {
     return (
