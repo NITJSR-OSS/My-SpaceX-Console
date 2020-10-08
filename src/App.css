@@ -20,7 +20,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo-container {
-    animation: App-logo-spin infinite 15s linear;
+    animation: App-logo-spin infinite 3s linear;
   }
 }
 
