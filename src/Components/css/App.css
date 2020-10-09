@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -x: hidden;
+  font-family: "Teko", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(104, 103, 103);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(104, 103, 103);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(82, 81, 81);
+}
+
+.landing {
+  background-color: #000;
+  min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.landing_logo {
+  margin: auto;
+  width: 100%;
+  opacity: 0;
+  animation: logo 4s ease-in;
+  animation-fill-mode: forwards;
+}
+.btn-light {
+  background-color: #fff2;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+  /* padding: 5px; */
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid #fff;
+  animation: btn-light 4s ease-in-out infinite alternate;
+}
+
+@keyframes logo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes btn-light {
+  from {
+    background-color: #fff2;
+  }
+  to {
+    background-color: #fff4;
+  }
+}
