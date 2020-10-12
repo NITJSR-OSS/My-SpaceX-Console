@@ -5,7 +5,9 @@ import Logo from "../Logo/Logo";
 import HorLine from './HorLine/HorLine' ; 
 import TagLine from './TagLine/TagLine' ; 
 import OwnerName from "./OwnerName/OwnerName";
- 
+import Cards from './Cards/Cards' ;
+import pic1 from "../../assets/pic1.jpg";
+import pic2 from "../../assets/pic2.jpg";
 
 const homepage = (props) => {
   return (
@@ -25,6 +27,18 @@ const homepage = (props) => {
       <aside className={styles.name}>
         <OwnerName/>
       </aside>
+      <aside className={styles.card1}>
+         <Cards name={props.name1} pic={pic1} post="COO" />
+      </aside>
+      <div>
+        <h1>Team</h1>
+      </div>
+      <aside className={styles.card2}>
+         <Cards name={props.name2} pic={pic2} post="CTO Propulsion" />
+      </aside>
+      <footer className={styles.footer}>
+        <p>footer</p>
+      </footer>
     </div>
   );
 };

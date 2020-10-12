@@ -18,7 +18,7 @@
 
 .TagLine {
   grid-column: 1 / 2;
-  grid-row-start: 2 / 3;
+  grid-row: 2 / 3;
   background-color: black;
   min-height: 300px;
   margin: 30px;
@@ -38,9 +38,26 @@
   background-color: black;
 }
 
-.footer {
+.card1 {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  min-height: 300px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+}
+
+.card2 {
+  grid-column: 2 / 4;
+  grid-row: 5 / 6;
+  display: flex;
+ justify-content: flex-start;
+  background-color: black;
+}
+
+.foot {
   grid-column: 1 / 4;
-  grid-row: 6 / 7;
+  grid-row: 6 / 8;
   background-color: #ffa500;
   height: 100%;
 }
@@ -73,13 +90,33 @@
 
   .name {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 6;
     grid-row-start: 5;
     grid-row-end: 6;
     text-align: center;
     min-height: 100px;
   }
 
+  .card1 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    justify-content: center;
+  }
+
+  .card2 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    justify-content: center;
+  }
+
   .footer {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 8;
+    grid-row-end: 9;
   }
 }

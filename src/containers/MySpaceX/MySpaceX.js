@@ -25,8 +25,8 @@ class MySpaceX extends Component {
       <Homepage
         company={this.state.infos.name}
         add={this.state.infos.summary}
-        cto_propulsion={this.state.infos.cto_propulsion}
-        coo={this.state.infos.coo}
+        name2={this.state.infos.cto_propulsion}
+        name1={this.state.infos.coo}
       />
     );
   }
