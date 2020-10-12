@@ -1,0 +1,25 @@
+.mainNav {
+  width:fit-content;    
+  height:45px;
+  -webkit-transform-origin: left top;
+   -webkit-transform: rotate(-90deg) translateX(-100%);
+}
+
+.nav{
+  box-sizing: inherit;
+  list-style: none;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  width: 100%; 
+}
+
+.nav li {
+  margin: 10px;
+  margin-left: 50px;
+  float: right;
+  line-height: 100px;
+}
+
+/* -webkit-transform: rotate(-90deg) translateX(-100%); */
+

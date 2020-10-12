@@ -1,37 +1,41 @@
 import React, { Component } from "react";
-import logo from "./assets/logo.svg";
-// import Aux from "./hoc/Auxillary/Auxillary";
-import "./App.css";
+import PreLoader from "./components/PreLoader/Preloader";
+import styles from "./App.css";
 import MySpaceX from "./containers/MySpaceX/MySpaceX";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import Nav from '../Navigation/Navigation' ;
 
 class App extends Component {
   state = {
-      loading : true    
-  }
+    loading: true,
+  };
 
   componentDidMount = () => {
-      setTimeout(() => {
-        this.setState({
-          loading : false
-        }) ; 
-      },4000) ; 
-  } ; 
-  
+    setTimeout(() => {
+      this.setState({
+        loading: false,
+      });
+    }, 2000);
+  };
+
   render() {
-      
+
     return (
-        <div className="App">
-           {
-             this.state.loading ?   <header className="App-header">
-             <div className="App-logo-container">
-               <img src={logo} className="App-logo" alt="logo" />
-             </div>
-             <h1>WELCOME TO SPACE-X </h1>
-           </header> : <MySpaceX/>
-           }
+      <Router>
+        <div className={styles.App}>
+          <Switch>
+            {this.state.loading ? <PreLoader /> : <Route path="/" exact component={MySpaceXX} /> }
+
+          </Switch>
         </div>
+      </Router>
+     
     );
   }
 }
+
+const MySpaceXX = () => (
+  <MySpaceX/>
+)
 
 export default App;

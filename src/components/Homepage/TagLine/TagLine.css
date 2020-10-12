@@ -1,0 +1,33 @@
+.TagLine {
+  font-family: "Gadugi";
+  color: rgb(252, 1, 125);
+  font-size: 70px;
+  text-align: left;
+  height: min-content;
+}
+
+.TagLine p {
+  margin: 0;
+}
+
+@media (max-width:768px){
+    .TagLine{
+      font-size: 60px;
+    }
+}
+
+@media (max-width : 500px){
+  .TagLine{
+    font-size: 40px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+@media (max-width : 370px){
+  .TagLine{
+    font-size: 35px;
+    margin-bottom: 0;
+  }
+}
+
+
