@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&family=Ubuntu&display=swap');
+.Overview p{
+    font-size: 80px;
+    font-family: 'Ubuntu';
+    color: white;
+}
+
+@media (max-width: 768px){
+    .Overview{
+        font-size: 70px;
+    }
+}
+@media (max-width: 500px){
+    .Overview{
+         font-size: 60px;
+    }
+}
+@media (max-width: 370px){
+    .Overview{
+        font-size: 45px;
+    }
+}

@@ -1,0 +1,21 @@
+.summary{
+    font-size: 60px;
+    color: white;
+    margin: 3%;
+}
+
+@media (max-width: 768px){
+    .summary{
+        font-size: 40px;
+    }
+}
+@media (max-width: 500px){
+    .summary{
+         font-size: 30px;
+    }
+}
+@media (max-width: 370px){
+    .summary{
+        font-size: 25px;
+    }
+}

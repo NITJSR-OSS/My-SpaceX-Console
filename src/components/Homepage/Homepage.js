@@ -2,39 +2,47 @@ import React from "react";
 import styles from "./Homepage.css";
 import Profile from "./ProfileCard/ProfileCard";
 import Logo from "../Logo/Logo";
-import HorLine from './HorLine/HorLine' ; 
-import TagLine from './TagLine/TagLine' ; 
+import HorLine from "./HorLine/HorLine";
+import TagLine from "./TagLine/TagLine";
 import OwnerName from "./OwnerName/OwnerName";
-import Cards from './Cards/Cards' ;
+import Cards from "./Cards/Cards";
 import pic1 from "../../assets/pic1.jpg";
 import pic2 from "../../assets/pic2.jpg";
+import OverView from "./OverView/OverView";
+import Summary from "./Summary/Summary";
 
 const homepage = (props) => {
   return (
     <div className={styles.wrapper}>
       <header className={styles.NavLogo}>
-          <Logo/>
+        <Logo />
       </header>
 
       <article className={styles.TagLine}>
-           <TagLine summary={props.summary} add={props.add}/>
-           <HorLine/>
+        <TagLine summary={props.summary} add={props.add} />
+        <HorLine />
       </article>
 
       <aside className={styles.Profile}>
         <Profile />
       </aside>
       <aside className={styles.name}>
-        <OwnerName/>
+        <OwnerName />
       </aside>
       <aside className={styles.card1}>
-         <Cards name={props.name1} pic={pic1} post="COO" />
+        <Cards name={props.name1} pic={pic1} post="COO" />
       </aside>
       <div>
         <h1>Team</h1>
       </div>
       <aside className={styles.card2}>
-         <Cards name={props.name2} pic={pic2} post="CTO Propulsion" />
+        <Cards name={props.name2} pic={pic2} post="CTO Propulsion" />
+      </aside>
+      <aside className={styles.AboutHeading}>
+        <OverView />
+      </aside>
+      <aside className={styles.summary}>
+        <Summary summary={props.add} />
       </aside>
       <footer className={styles.footer}>
         <p>footer</p>
