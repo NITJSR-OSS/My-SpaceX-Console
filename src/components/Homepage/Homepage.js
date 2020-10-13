@@ -10,6 +10,9 @@ import pic1 from "../../assets/pic1.jpg";
 import pic2 from "../../assets/pic2.jpg";
 import OverView from "./OverView/OverView";
 import Summary from "./Summary/Summary";
+import Keys from "./Table/Keys/keys";
+import Values from "./Table/Values/values";
+import Footer from './Footer/Footer' ; 
 
 const homepage = (props) => {
   return (
@@ -32,9 +35,6 @@ const homepage = (props) => {
       <aside className={styles.card1}>
         <Cards name={props.name1} pic={pic1} post="COO" />
       </aside>
-      <div>
-        <h1>Team</h1>
-      </div>
       <aside className={styles.card2}>
         <Cards name={props.name2} pic={pic2} post="CTO Propulsion" />
       </aside>
@@ -44,8 +44,14 @@ const homepage = (props) => {
       <aside className={styles.summary}>
         <Summary summary={props.add} />
       </aside>
-      <footer className={styles.footer}>
-        <p>footer</p>
+      <aside className={styles.keys}>
+        <Keys reqData={props.reqData} />
+      </aside>
+      <aside className={styles.values}>
+        <Values reqData={props.reqData} />
+      </aside>
+      <footer className={styles.foot}>
+        <Footer/>
       </footer>
     </div>
   );

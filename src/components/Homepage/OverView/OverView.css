@@ -6,17 +6,17 @@
 }
 
 @media (max-width: 768px){
-    .Overview{
+    .Overview p{
         font-size: 70px;
     }
 }
 @media (max-width: 500px){
-    .Overview{
-         font-size: 60px;
+    .Overview p{
+         font-size: 50px;
     }
 }
-@media (max-width: 370px){
-    .Overview{
-        font-size: 45px;
+@media (max-width: 360px){
+    .Overview p{
+        font-size: 40px;
     }
 }

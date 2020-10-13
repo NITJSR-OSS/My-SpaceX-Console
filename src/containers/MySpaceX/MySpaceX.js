@@ -21,12 +21,14 @@ class MySpaceX extends Component {
   }
 
   render() {
+
     return (
       <Homepage
         company={this.state.infos.name}
         add={this.state.infos.summary}
         name2={this.state.infos.cto_propulsion}
         name1={this.state.infos.coo}
+        reqData={this.state.infos}
       />
     );
   }

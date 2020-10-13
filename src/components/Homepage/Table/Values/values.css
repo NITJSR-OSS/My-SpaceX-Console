@@ -1,0 +1,29 @@
+.values{
+    font-size: 40px;
+    color:#72b0f2;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+ }
+
+ @media (max-width: 768px){
+     .values{
+         font-size: 30px;
+     }
+ }
+ @media (max-width: 600px){
+     .values{
+         font-size: 20px;
+     }
+ }
+ @media (max-width : 450px){
+    .values{
+        font-size: 18px;
+    }
+}
+ @media (max-width: 360px){
+     .values{
+         font-size: 15px;
+     }
+ }
