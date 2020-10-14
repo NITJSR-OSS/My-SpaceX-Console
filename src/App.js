@@ -1,20 +1,25 @@
 import React from 'react';
-import logo from './assets/logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Home from './screens/homeScreen/Home';
+import Launch from './screens/launchScreen/Launch';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="App-logo-container">
-          <img src={logo} className="App-logo" alt="logo" />
+    <Router>
+      <div className='app'>
+        <Sidebar/>
+        <div className='app-body'>
+          <Switch>
+            <Route path='/launch' exact component={Launch}/>
+            <Route path="/home"component={Home}></Route>
+            <Redirect from='/' to='/home'/>
+          </Switch>
         </div>
-        <h3>WELCOME TO SPACEX CONSOLE</h3>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+      </div>
+    </Router>
+    
   );
 }
 

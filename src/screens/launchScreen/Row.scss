@@ -1,0 +1,43 @@
+.launch-row{
+    color: white;
+    .row-title{
+        h1{
+            margin: 20px;
+        }
+    }
+}
+.row-body{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    .launch-card{
+        background-color: #232a3b;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        min-width: 300px;
+        min-height: 200px;
+        margin: 10px;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+/* Hiding scrollBar */
+.row-body::-webkit-scrollbar{
+    display: none;
+}
+
+
+.launch-card{
+    width: 100%;
+    object-fit: contain;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.row-card:hover{
+    transform: scale(1.08);
+}

@@ -1,0 +1,21 @@
+.launch-screen-container{
+    display: flex;
+    max-width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #232a3bf6;
+    flex-direction: column;
+    .launch-screen{
+        .launch-header-logo{
+            margin: 0;
+            background-image: url(../../assets/images/1.jpg);;
+            min-height: 50vh;
+            background-position: bottom;
+            .launch-header-logo-overlay{
+                background-image: linear-gradient(#23232360, #232a3b45);
+                min-height: 50vh;
+                height: 100%;
+            }
+        }
+    }
+}
