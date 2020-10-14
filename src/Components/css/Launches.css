@@ -1,0 +1,18 @@
+.Launch {
+  background: linear-gradient(#0006, #0006), url("../../assets/backgound1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.Launches {
+  display: flex;
+}
+.Launches h4 {
+  color: #fff;
+  position: absolute;
+}
+@media only screen and (max-width: 1000px) {
+  .Launches {
+    flex-direction: column;
+  }
+}

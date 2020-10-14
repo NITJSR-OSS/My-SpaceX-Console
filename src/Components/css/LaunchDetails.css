@@ -1,0 +1,57 @@
+.launchdetail {
+  background: linear-gradient(#0009, #0009), url("../../assets/launch.jpg");
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.lists {
+  display: flex;
+  margin: 20px;
+}
+.info {
+  text-align: center;
+  width: 30%;
+}
+.info h1 {
+  color: #fff;
+  text-decoration: underline;
+}
+hr {
+  display: none;
+  margin: 20px;
+}
+
+.box_info {
+  border: 2px solid rgb(105, 102, 102);
+  background-color: #fff2;
+  border-radius: 10px;
+  width: 40%;
+  color: #fff;
+  float: right;
+  position: relative;
+  left: 20%;
+  text-align: center;
+  padding: 20px;
+}
+.box_info h2 {
+  letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .info {
+    width: 60%;
+    margin: auto;
+  }
+  .info img {
+    max-height: 30vh;
+  }
+  .box_info {
+    width: 60%;
+  }
+  .lists {
+    flex-direction: column;
+  }
+  hr {
+    display: block;
+  }
+}

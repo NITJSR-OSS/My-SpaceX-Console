@@ -1,0 +1,8 @@
+.article {
+  color: rgb(26, 2, 92);
+}
+.close {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+}

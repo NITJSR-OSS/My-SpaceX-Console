@@ -1,0 +1,50 @@
+.nav {
+  position: absolute fixed;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  align-items: center;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.logo {
+  padding: 0 40px;
+  max-width: 250px;
+}
+.nav-links {
+  position: absolute;
+  display: flex;
+  right: 5%;
+}
+ul li {
+  padding: 20px;
+  list-style: none;
+  color: #fff;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+a {
+  text-decoration: none;
+}
+.nav a:hover {
+  color: rgb(177, 174, 197);
+  text-decoration: underline;
+  transition: 0.5s;
+}
+@media only screen and (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+  .logo {
+    margin: auto;
+    position: absolute;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+  }
+}

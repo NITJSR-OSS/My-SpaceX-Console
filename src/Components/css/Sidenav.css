@@ -1,0 +1,68 @@
+.sidebar {
+  background-color: #000;
+  display: none;
+  overflow-x: hidden;
+}
+.burger {
+  position: relative;
+  display: none;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  right: 20%;
+}
+.burger div {
+  position: relative;
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+}
+.items {
+  display: none;
+}
+.line1 {
+  position: relative;
+  margin-bottom: 5px;
+}
+.line2 {
+  margin: 5px;
+  position: relative;
+}
+.line3 {
+  position: relative;
+  margin-top: 5px;
+}
+ul {
+  color: #000;
+}
+/* 
+.burger:hover {
+  animation: anime1 2s;
+}
+.line2:hover {
+  animation: anime2 0.002s;
+} */
+.side-links {
+  margin: 20px;
+  display: none;
+}
+.side-links a:hover {
+  color: rgb(177, 174, 197);
+  text-decoration: underline;
+  transition: 0.5s;
+}
+.sideLogo img {
+  max-width: 50%;
+  margin: auto;
+}
+@media only screen and (max-width: 1000px) {
+  .sidebar {
+    display: block;
+  }
+  .burger {
+    display: inline-block;
+  }
+  .side-links {
+    display: block;
+  }
+}

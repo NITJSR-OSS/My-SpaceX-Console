@@ -1,0 +1,59 @@
+.home {
+  background: linear-gradient(#0007, #0007), url("../../assets/space.jpg");
+  min-height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.earth {
+  max-height: 20vh;
+  position: absolute;
+  top: 10vh;
+  right: 20%;
+  animation: animate 80s linear infinite;
+  /* z-index: -1; */
+}
+
+.para {
+  overflow-y: scroll;
+  position: relative;
+  top: 10vh;
+  background-color: #fff2;
+  max-height: 60vh;
+  max-width: 50%;
+  margin-left: 10vw;
+  border: 2px solid rgb(105, 102, 102);
+  box-shadow: 5px 5px 15px rgb(105, 102, 102);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.para h1 {
+  color: rgb(82, 29, 4);
+  text-shadow: 2px 2px 5px rgb(197, 150, 21);
+}
+
+.btn_km {
+  padding: 5px;
+  cursor: pointer;
+  background-color: rgb(82, 29, 4);
+  color: #fff;
+  border: 1px solid rgb(197, 150, 21);
+  border-radius: 5px;
+}
+
+@keyframes animate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .para {
+    max-width: 80%;
+  }
+}
