@@ -20,7 +20,6 @@ const homepage = (props) => {
       <header className={styles.NavLogo}>
         <Logo />
       </header>
-
       <article className={styles.TagLine}>
         <TagLine summary={props.summary} add={props.add} />
         <HorLine />

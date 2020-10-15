@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .heading {
+    font-size: 70px;
+    text-shadow: 4px 4px 0px #3F7FBF;
+    animation: fadeIn 1.5s linear forwards;
+  }
+  
+  @keyframes fadeIn {
+      0% {
+          opacity: 0
+      }
+  
+      100% {
+          opacity: 1;
+      }
+  }
+
+  @media (max-width: 768px){
+      .heading{
+          font-size: 50px;
+      }
+  }
+  @media (max-width: 500px){
+      .heading{
+          font-size: 40px;
+      }
+  }
