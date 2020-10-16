@@ -11,9 +11,7 @@ const rocket = (props) => {
     var timeLeft = Math.abs(Rockettime-currentTime) ; 
     var days = Math.round(timeLeft / (1000*60*60*24)) ; 
     
-    function printing(){
-        alert('ButtonClicked') ; 
-    }
+  
 
     
     var image = props.image ; 
@@ -26,7 +24,7 @@ const rocket = (props) => {
     }
     return (
         <div className={styles.rocket}>
-          <img className={styles.image} src={image} alt={image} onClick={printing}/>
+          <img className={styles.image} src={image} alt={image} />
           <p className={styles.name}>{props.name}</p> 
           <p className={styles.number}>{props.number}</p>
           <p className={styles.days}>{days} days {props.timing}</p>

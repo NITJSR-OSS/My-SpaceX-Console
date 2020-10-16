@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Launches.css";
-import Logo from "../Logo/Logo";
-import Header from './Header/Header' ; 
+import Nav from '../Navigation/Navigation' ; 
+// import Header from './Header/Header' ; 
 import UpcomingLaunches from './UpcomingLaunches/UpcomingLaunches' ; 
 import BackGround from './BackGround/BackGround' ; 
 import PastLaunches from './PastLaunches/PastLaunches' ; 
@@ -12,7 +12,7 @@ const Launches = (props) => {
   return (
     <div className={styles.wrapper}>
         <BackGround />
-        <Logo />
+        <Nav />
         {/* <Header/> */}
         <UpcomingLaunches future={props.future}/>
         <PastLaunches past = {props.past}/>

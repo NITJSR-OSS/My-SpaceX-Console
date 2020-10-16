@@ -1,15 +1,27 @@
 import React from "react";
 import styles from "./Navigation.css";
+import Logo from "../Logo/Logo";
 
 const nav = () => {
   return (
     <div className={styles.mainNav}>
-      <ul className={styles.nav}>
-        <li>HOME</li>
-        <li>LAUNCHES</li>
-        <li>MAPS</li>
-        <li>NOTIFICATIONS</li>
-      </ul>
+      <Logo />
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Launches</a>
+          </li>
+          <li>
+            <a href="#">Launchpads</a>
+          </li>
+          <li>
+            <a href="#">Notifications</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

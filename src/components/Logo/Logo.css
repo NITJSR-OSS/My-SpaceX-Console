@@ -1,7 +1,21 @@
 .Logo{
     display: flex;
     justify-content: center;
+    margin-left: 2.8%;
 }
 .Logo img{
-    width: 60%;
+    width: 550px;
 }
+
+@media (max-width:768px){
+    .Logo img{
+        width: 350px ; 
+    }
+}
+@media (max-width: 500px){
+    .Logo img{
+        width: 200px ; 
+    }
+}
+
+

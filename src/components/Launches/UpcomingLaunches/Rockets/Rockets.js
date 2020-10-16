@@ -11,7 +11,7 @@ const Rockets = (props) => {
     let rocket = [] ; 
     for(let i=0 ; i<name.length ; i++){
       rocket.push(
-          <Rocket name={name[i]} time={time[i]} number={number[i]} image={image[i]} timing={props.timing}/>
+          <Rocket name={name[i]} time={time[i]} number={number[i]} image={image[i]} timing={props.timing} />
         ) ;
     } ;
 
