@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .values{
     font-size: 40px;
     color:#72b0f2;
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start; */
+    font-family: 'lato';
     align-items: flex-start;
  }
 

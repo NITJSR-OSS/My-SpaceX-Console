@@ -1,11 +1,11 @@
 .wrapper {
   display: grid;
   grid-template-columns: 3.8fr 2fr 2fr;
-  background-color: black;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
 .wrapper > * {
-  padding: 25px;
+  padding: 20px;
   text-align: center;
   /* background-color: black; */
 }
@@ -13,13 +13,13 @@
 .NavLogo {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .TagLine {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  background-color: black;
+  /* background-color: black; */
   min-height: 300px;
   margin: 30px;
 }
@@ -28,14 +28,14 @@
   grid-column: 2 / 4;
   grid-row: 2 / 5;
   min-height: 400px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .name {
   grid-column: 1 / 2;
   grid-row: 3 / 5;
   min-height: 300px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .card1 {
@@ -44,7 +44,7 @@
   min-height: 300px;
   display: flex;
   justify-content: flex-end;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .card2 {
@@ -52,19 +52,19 @@
   grid-row: 5 / 6;
   display: flex;
  justify-content: flex-start;
-  background-color: black;
+  /* background-color: black; */
 }
 .AboutHeading{
   grid-column: 1 / 4;
   grid-row: 6 / 7;
-  background-color: black;
-  min-height: 40px;
+  /* background-color: black; */
+  min-height: 20px;
   text-align: center;
 }
 .summary{
   grid-column: 1/4;
   grid-row: 7 / 8;
-  background-color: black;
+  /* background-color: black; */
   min-height: 100px;
   padding: 2.5%;
   text-align: left;
@@ -73,20 +73,20 @@
 .keys{
   grid-column: 1/2;
   grid-row: 8/9;
-  background-color: black;
+  /* background-color: black; */
   min-height: 300px;
 }
 
 .values{
   grid-column: 2/4;
   grid-row: 8/9;
-  background-color:  black;
+  /* background-color:  black; */
 }
 
 .foot {
   grid-column: 1 / 4;
   grid-row: 9/ 10;
-  background-color: black;
+  /* background-color: black; */
   height: 100%;
   padding: 0px;
 }
@@ -113,7 +113,7 @@
     grid-column-end: 6;
     grid-row-start: 3;
     grid-row-end: 5;
-    background: black;
+    /* background: black; */
     /* height: 300px; */
   }
 

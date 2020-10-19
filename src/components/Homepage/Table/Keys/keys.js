@@ -17,8 +17,8 @@ const keys = (props) => {
         htmlData.push(<Key id={key[0]} data={key[0].toUpperCase()}/>)
      })
     return (
-          <div className={styles.key}>
-              {htmlData}
+          <div className={styles.key}>  
+              <span className={styles.keyItem}>{htmlData}</span>
           </div>
     ) ;
 }

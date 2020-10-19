@@ -1,24 +1,27 @@
 import React from "react";
 import styles from "./Navigation.css";
-import Logo from "../Logo/Logo";
+import Logo from "../Logo/Logo" ;
+import { Link } from 'react-router-dom';
 
-const nav = () => {
+const nav = (props) => {
+  // let toogle = props.toggle ; 
+
   return (
     <div className={styles.mainNav}>
       <Logo />
       <nav className={styles.nav}>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">Launches</a>
+            <Link to="/launches">Launches</Link>
           </li>
           <li>
-            <a href="#">Launchpads</a>
+            <Link to="/Maps">Maps</Link>
           </li>
           <li>
-            <a href="#">Notifications</a>
+            <Link to="/notifications">Notifications</Link>
           </li>
         </ul>
       </nav>

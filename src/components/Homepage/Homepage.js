@@ -13,12 +13,13 @@ import Summary from "./Summary/Summary";
 import Keys from "./Table/Keys/keys";
 import Values from "./Table/Values/values";
 import Footer from './Footer/Footer' ; 
-
+import Nav from '../Navigation/Navigation' ;
+ 
 const homepage = (props) => {
   return (
     <div className={styles.wrapper}>
       <header className={styles.NavLogo}>
-        <Logo />
+        <Nav />
       </header>
       <article className={styles.TagLine}>
         <TagLine summary={props.summary} add={props.add} />

@@ -1,8 +1,8 @@
 import React from 'react' ; 
-
+import styles from './Key.css' ;
 const key = (props) =>{
     return(
-        <div>{props.data}</div>
+        <div className={styles.key}>{props.data}</div>
     )
 }
 

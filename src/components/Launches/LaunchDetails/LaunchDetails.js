@@ -1,10 +1,21 @@
-import React from 'react' ; 
+import React,{useEffect,useState} from 'react' ; 
 import styles from './LaunchDetails.css' ; 
 import Nav from '../../Logo/Logo' ; 
+import axios from 'axios' ; 
 
-const launchDetails = (props) => {
-    const data = props.data ; 
+const LaunchDetails = (props) => {
+   const[data,updatedData] = useState(null) ; 
     
+    useEffect(()=>{
+      axios.get('https://api.spacexdata.com/v4/launches/'+localStorage.getItem('count')) 
+      .then(response => {
+          updatedData(response.data) ; 
+          return ; 
+      })
+    }) ; 
+     
+    console.log(data) ; 
+      
     return(
          <div className={styles.launchDetails}>
             <Nav/>
@@ -20,4 +31,4 @@ const launchDetails = (props) => {
     ) ; 
 }
 
-export default launchDetails ; 
+export default LaunchDetails ; 

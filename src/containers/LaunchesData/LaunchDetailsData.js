@@ -1,18 +1,22 @@
 import React, {Component} from 'react' ; 
  import axios from 'axios' ; 
 import LaunchDetails from '../../components/Launches/LaunchDetails/LaunchDetails' ; 
-
+import {reactLocalStorage} from 'reactjs-localstorage';
 
 class LaunchDetailsData extends Component {
 
     state = {
-        id : this.props.id,
+        id : 0,
         data : [],
         isLoaded : false
     } 
     
-    componentDidCatch(){
-        axios.get('https://api.spacexdata.com/v4/launches/'+this.state.id)
+    componentDidMount(){
+        const rocketid = localStorage.getItem('count') ; 
+        console.log(rocketid) ; 
+        this.setState({id:rocketid}) ; 
+        console.log(this.state.id,'       printing this') ; 
+        axios.get('https://api.spacexdata.com/v4/launches/'+rocketid) 
              .then(response => {
                  const updatedData = response.data ; 
                  this.setState({
@@ -23,6 +27,7 @@ class LaunchDetailsData extends Component {
         }; 
     
     render(){
+        console.log(this.props.id) ;
         const{data,isLoaded} = this.state ;
         if(isLoaded){
             let missionDetails = [] ;

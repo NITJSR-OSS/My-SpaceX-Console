@@ -8,11 +8,13 @@ const latestLaunches = (props) => {
     const time = [] ;
     const number = [] ; 
     const image = [] ; 
+    const id = [] ;
     name.push(value.name) ; 
     time.push(value.date_unix); 
     number.push(value.flight_number) ;
     image.push(value.links.patch.small) ;
-
+    id.push(value.id) ;
+    
     return(
         <div>
         <UpcomingLaunchesHeading title="Latest Launches"/>
@@ -21,6 +23,7 @@ const latestLaunches = (props) => {
             time = {time}
             number = {number}
             image = {image}
+            id = {id} 
             timing = "ago"
         />
  </div>

@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .key {
    font-size: 40px;
    color: #f74747;
    display: flex;
    flex-direction: column;
-   align-items: flex-end;
+   text-align: initial;
+   border-left: 3px solid pink;
+   font-family: 'lato';
+}
+.keyItem{
+    margin-left: 1rem;
 }
 
 @media (max-width: 768px){

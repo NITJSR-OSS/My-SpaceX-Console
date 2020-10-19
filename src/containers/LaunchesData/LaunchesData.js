@@ -21,7 +21,7 @@ class LaunchesData extends Component {
     axios
       .get("https://api.spacexdata.com/v4/launches/upcoming")
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         const data = response.data;
         const updatedUpcomingLaunches = [...data];
         this.setState({
@@ -29,11 +29,11 @@ class LaunchesData extends Component {
           isLoadedFuture: true,
         });
       });
-    console.log(this.state.UpcomingLaunches) ;
+    // console.log(this.state.UpcomingLaunches) ;
     axios
       .get("https://api.spacexdata.com/v4/launches/latest")
       .then((response) => {
-        console.log(response) ; 
+        // console.log(response) ; 
         const data = response.data;
         this.setState({
           LatestLaunches: data,
@@ -45,7 +45,7 @@ class LaunchesData extends Component {
     axios
       .get("https://api.spacexdata.com/v4/launches/past")
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         const data = response.data;
         const updatedPastLaunches = [...data];
         this.setState({
@@ -65,7 +65,7 @@ class LaunchesData extends Component {
       isLoadedPresent,
     } = this.state;
     if(isLoadedFuture && isLoadedPast && isLoadedPresent) {
-      console.log(this.state);
+      // console.log(this.state);
       return (
         // console.log(this.state) ;
         <Launches

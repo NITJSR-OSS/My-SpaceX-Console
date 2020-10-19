@@ -1,20 +1,47 @@
-import React from 'react'  ; 
+import React,{Component} from 'react'  ; 
 import styles from './Rockets.css' ; 
 import Rocket from './Rocket/Rocket' ; 
 
-const Rockets = (props) => {
-    let name = props.name ; 
-    let time = props.time ; 
-    let number = props.number ; 
-    let image = props.image ; 
+class Rockets extends Component  {
+    state={
+        name : this.props.name ,
+        time : this.props.time , 
+        number : this.props.number , 
+        image  : this.props.image , 
+        id : this.props.id ,
+        isLoaded: false
+    }
+    componentDidMount() {
+        let flag=1 ;
+        let states = Object.keys(this.state) ;
+        states.forEach(pros => {
+            if(pros.length===0){
+                flag=0;
+            }
+        });
+        if(flag===1){
+          this.setState({isLoaded:true}) ;
+        }
+    }
     
-    let rocket = [] ; 
-    for(let i=0 ; i<name.length ; i++){
-      rocket.push(
-          <Rocket name={name[i]} time={time[i]} number={number[i]} image={image[i]} timing={props.timing} />
-        ) ;
-    } ;
 
+   render(){
+     
+    const{name,time,number,image,id,isLoaded} = this.state ;
+    let rocket = [] ; 
+    console.log(id);
+    console.log(name);
+    if(isLoaded){
+        for(let i=0 ; i<name.length ; i++){
+          rocket.push(
+              <Rocket name={name[i]} time={time[i]} number={number[i]} image={image[i]} timing={this.props.timing} id={id[i]} />
+            ) ;
+        } ;
+    }
+    else{
+        rocket.push(<h1>LOADING...</h1>) ;
+    }
+   
     return(
         <div className={styles.rockets}>
             {rocket}
@@ -22,5 +49,5 @@ const Rockets = (props) => {
     );
 } ; 
 
+}
 export default Rockets ; 
-
