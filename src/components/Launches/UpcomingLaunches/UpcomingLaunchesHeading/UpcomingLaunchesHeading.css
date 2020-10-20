@@ -5,6 +5,8 @@
     justify-content: space-around;
     margin-top: 5rem;
     margin-bottom: 3rem ;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .Line{
@@ -20,7 +22,8 @@
   font-family: 'lato',sans-serif ; 
   font-weight: 300 ; 
   font-size: 70px ; 
-  letter-spacing: 10px ; 
+  letter-spacing: 10px ;
+  /* text-align: left;  */
 }
 
 .title span{

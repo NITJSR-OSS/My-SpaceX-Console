@@ -5,7 +5,7 @@ import MySpaceX from "./containers/MySpaceX/MySpaceX";
 import LaunchesData from './containers/LaunchesData/LaunchesData' ; 
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import MapData from './containers/MapData/MapData' ;
-import LaunchDetails from './components/Launches/LaunchDetails/LaunchDetails' ;
+import LaunchDetailsData from './containers/LaunchesData/LaunchDetailsData' ;
 
 class App extends Component {
   state = {
@@ -28,7 +28,7 @@ class App extends Component {
           <Switch>
             {this.state.loading ? <PreLoader /> : <Route path="/" exact component={MySpaceXX} /> }
              <Route path="/launches" exact component={Launches}/>
-             <Route path="/launchDetails" component={LaunchDetails}/>
+             <Route path="/launchDetails" component={LaunchDetailsData}/>
              <Route path="/Maps" component={MapData}/>
           </Switch>
         </div>

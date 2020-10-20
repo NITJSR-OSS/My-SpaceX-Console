@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .summary{
     font-size: 60px;
+    font-family: 'lato',sans-serif ;
     color: white;
     margin: 3%;
 }

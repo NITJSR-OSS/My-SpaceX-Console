@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import styles from "./Maps.css";
 import Nav from "../Navigation/Navigation";
 import MobileMenu from '../Navigation/MobileMenu/MobileMenu' ; 
+import Footer from '../Homepage/Footer/Footer' ; 
 import Heading from '../Launches/UpcomingLaunches/UpcomingLaunchesHeading/UpcomingLaunchesHeading' ; 
 
 const arr = [] ; 
@@ -89,6 +90,7 @@ class Maps extends Component {
           />
           {this.state.position}
         </Map>
+        <Footer/>
       </div>
     );
   }

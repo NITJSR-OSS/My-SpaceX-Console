@@ -1,34 +1,38 @@
-import React,{useEffect,useState} from 'react' ; 
-import styles from './LaunchDetails.css' ; 
-import Nav from '../../Logo/Logo' ; 
-import axios from 'axios' ; 
+import React from "react";
+import styles from "./LaunchDetails.css";
+import Nav from "../../Navigation/Navigation";
+import thumbnail from "../../../assets/thumbnail1.jpg";
+import Heading from "../UpcomingLaunches/UpcomingLaunchesHeading/UpcomingLaunchesHeading";
+import Cards from "../../Homepage/Cards/Cards";
+import MissionDetails from "./MissionData/MissionData";
+import Cores from './Cores/Cores' ; 
+import Links from './Links/Links'; 
+import Footer from '../../Homepage/Footer/Footer';
 
 const LaunchDetails = (props) => {
-   const[data,updatedData] = useState(null) ; 
-    
-    useEffect(()=>{
-      axios.get('https://api.spacexdata.com/v4/launches/'+localStorage.getItem('count')) 
-      .then(response => {
-          updatedData(response.data) ; 
-          return ; 
-      })
-    }) ; 
-     
-    console.log(data) ; 
-      
-    return(
-         <div className={styles.launchDetails}>
-            <Nav/>
-            <div className={styles.screenData}>
-               <div className={styles.rocketImg}>
-                 {props.image} 
-               </div>
-               <div className={styles.missionDetails}>
-                  
-               </div>
-            </div>        
-         </div>
-    ) ; 
-}
+  let data = props.data;
+  let image = data.links.patch.small;
+  let name = data.name;
+  if (image == null) {
+    image = thumbnail;
+  }
+  return (
+    <div className={styles.launchDetails}>
+      <Nav />
+      <div className={styles.image}>
+        <Cards pic={image} name={name} />
+      </div>
+      <div className={styles.rocket}>
+        <Heading title="Mission Details" />
+        <MissionDetails props={data} />
+      </div>
+      <Heading  title="Cores" />
+      <Cores data={data}/>
+      <Heading  title="Links" />
+      <Links data={data}/>
+      <Footer/>
+    </div>
+  );
+};
 
-export default LaunchDetails ; 
+export default LaunchDetails;

@@ -25,7 +25,14 @@
 	padding: 7px;
 }
 
-
+@media (max-width: 500px){
+	.round{
+		width: 50%;
+	}
+	.name{
+		font-size: large;
+	}
+}
 
 
 

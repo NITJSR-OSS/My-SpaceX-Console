@@ -1,28 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-.missonData{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.heading{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.line{
-    display: list-item;
-    width: 100%;
-    background-color: gold;
-}
-
 .detailsContainer{
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 10%;
     margin-left: 4%;
     margin-right: 7%;
+    margin-bottom: 4%;
     padding-left: 7%;
     border-left: 4px solid blueviolet;
 }
@@ -33,10 +16,20 @@
     color: aliceblue;
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;  */
     text-align: left;
     margin: 0.5%;
     padding: 4px;
+    word-wrap: break-word ;
+}
+
+.detailsContainer div a {
+    text-decoration: none;
+    transition: transform 0.2s;
+    word-wrap: break-word;
+}
+.detailsContainer div a:hover {
+    transform: scaleY(1.1);
 }
 
 .key{
@@ -44,6 +37,7 @@
     -webkit-background-clip: text ; 
     -webkit-text-fill-color: transparent ; 
     margin-right: 1%;
+    width: 100%;
 }
 
 @media (max-width: 1024px){
