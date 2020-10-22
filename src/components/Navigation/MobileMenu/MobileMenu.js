@@ -1,45 +1,38 @@
-import React, { useState } from "react";
-import * as FaIcons from "react-icons/fa";
-// import * as AiIcons from "react-icons/ai"; 
-import { Link } from "react-router-dom";
-import { MobileMenuData } from "./MobileMenuData";
+import React from "react";
 import styles from "./MobileMenu.css";
-import { IconContext } from "react-icons";
+import { Link } from "react-router-dom";
 
-function MobileMenu() {
-  const [sidebar, setSidebar] = useState(false);
-
-  const showSidebar = () => setSidebar(!sidebar);
-  let navmenu = [];
-
-  navmenu.push(styles.navMenu);
-  navmenu.push(styles.active);
-
+const MobileMenu = () => {
   return (
-    <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <div className={styles.navbar}>
-          <Link to="#" className={styles.menuBars}>
-            <FaIcons.FaBars onClick={showSidebar} />
-          </Link>
-        </div>
-        <nav className={sidebar ? navmenu.join("") : navmenu[0]}>
-          <ul className={styles.navMenuItems} onClick={showSidebar}>
-            {MobileMenuData.map((item, index) => {
-              return (
-                <li key={index} className={styles.navText}>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span className={styles.items}>{item.title}</span>
-                  </Link>
+    <div className={styles.container}>
+      <div className={styles.phone}>
+        <div className={styles.content}>
+          <div role="navigation">
+            <div className={styles.menuToggle}>
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul className={styles.menu}>
+                <li>
+                <Link to="/" >Home</Link>
                 </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
-    </>
+                <li>
+                <Link to="/launches">Launches</Link>
+                </li>
+                <li>
+                <Link to="/Maps">Maps</Link>
+                </li>
+                <li>
+                <Link to="/notifications">Notifications</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default MobileMenu;

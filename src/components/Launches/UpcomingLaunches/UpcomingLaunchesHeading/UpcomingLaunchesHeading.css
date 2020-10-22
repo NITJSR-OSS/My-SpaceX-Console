@@ -45,5 +45,13 @@
 @media (max-width : 500px){
     .title{
         font-size: 40px;
+        letter-spacing: normal;
+    }
+}
+@media (max-width : 370px){
+    .title{
+        font-size: 35px;
+        text-align: left;
+        letter-spacing: normal;
     }
 }

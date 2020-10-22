@@ -1,6 +1,5 @@
 .card {
   padding: 0;
-  z-index: 6;
   height: auto;
 }
 
@@ -17,7 +16,7 @@
 
 @media (max-width:500px){
   .card img{
-    width: 350px;
+    width: 330px;
     height: auto;
   }
 }

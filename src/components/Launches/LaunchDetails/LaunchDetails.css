@@ -10,3 +10,10 @@
 .rocket{
     margin-bottom: 4%;
 }
+.mobileMenu{
+    padding: 15px 0 5px 0px;
+    height: 25px;
+    text-align: left;
+    margin-left: 5%;
+    /* padding-bottom: 5%;     */
+}

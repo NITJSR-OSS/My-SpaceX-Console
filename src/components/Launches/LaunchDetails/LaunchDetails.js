@@ -8,6 +8,7 @@ import MissionDetails from "./MissionData/MissionData";
 import Cores from './Cores/Cores' ; 
 import Links from './Links/Links'; 
 import Footer from '../../Homepage/Footer/Footer';
+import MobileMenu from '../../Navigation/MobileMenu/MobileMenu' ; 
 
 const LaunchDetails = (props) => {
   let data = props.data;
@@ -18,6 +19,9 @@ const LaunchDetails = (props) => {
   }
   return (
     <div className={styles.launchDetails}>
+       <div className={styles.mobileMenu}>
+          <MobileMenu/>
+        </div>
       <Nav />
       <div className={styles.image}>
         <Cards pic={image} name={name} />

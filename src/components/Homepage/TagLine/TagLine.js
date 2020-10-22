@@ -7,7 +7,7 @@ const tagLine = (props) => {
     let newstr = str.substr(0,74).toUpperCase() ; 
    return (
        <div className={styles.TagLine}>
-          <Heading styling="font-size:1vw" title={newstr}/>
+          <Heading title={newstr}/>
        </div>
    )
 }

@@ -1,6 +1,7 @@
 
 .Logo img{
     width: 550px;
+    margin-left: 2.5%;
 }
 
 @media (max-width:768px){
@@ -8,9 +9,9 @@
         width: 350px ; 
     }
 }
-@media (max-width: 500px){
+@media (max-width: 400px){
     .Logo img{
-        width: 200px ; 
+        width: 270px ; 
     }
 }
 

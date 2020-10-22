@@ -5,26 +5,15 @@ import thumbnail2 from "../../../../../assets/thumnail2.jpg";
 import thumbnail3 from "../../../../../assets/thumbnail3.jpg";
 import { Link } from "react-router-dom";
 import styles from "./Rocket.css";
-// import LaunchDetailsData from "../../../../../containers/LaunchesData/LaunchDetailsData";
+
 
 const Rocket = (props) => {
-  var d = new Date();
-  var currentTime = d.getUTCMilliseconds();
+  var currentTime = Math.round((new Date()).getTime() / 1000); 
   var Rockettime = props.time;
+  console.log(Rockettime) ;
   var timeLeft = Math.abs(Rockettime - currentTime);
-  var days = Math.round(timeLeft / (1000 * 60 * 60 * 24));
-  // let rocketID = [];
-  
-  // const [count, setCount] = useState(0); 
+  var days = Math.round(timeLeft / ( 60 * 60 * 24));
 
-  // const renderedData = () => {
-  //    localStorage.setItem('count',count) ; 
-  // }
-
-  // useEffect(() =>     
-  //      < LaunchDetailsData id={count} />
-  //   );
-  
 
   var image = props.image;
   if (image == null) {

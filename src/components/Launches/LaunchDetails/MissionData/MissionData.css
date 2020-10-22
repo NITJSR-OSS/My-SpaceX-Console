@@ -14,7 +14,7 @@
 .line{
     display: list-item;
     width: 100%;
-    background-color: gold;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
 
 .detailsContainer{

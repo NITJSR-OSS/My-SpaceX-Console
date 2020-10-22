@@ -11,16 +11,20 @@ import pic2 from "../../assets/pic2.jpg";
 import OverView from "./OverView/OverView";
 import Summary from "./Summary/Summary";
 import Keys from "./Table/Keys/keys";
-import Values from "./Table/Values/values";
-import Footer from './Footer/Footer' ; 
-import Nav from '../Navigation/Navigation' ;
- 
+import Footer from "./Footer/Footer";
+import Nav from "../Navigation/Navigation";
+import MobileMenu from '../Navigation/MobileMenu/MobileMenu';
+
 const homepage = (props) => {
   return (
     <div className={styles.wrapper}>
+      <div className={styles.mobileMenu}>
+         <MobileMenu/>
+      </div>
       <header className={styles.NavLogo}>
         <Nav />
       </header>
+       
       <article className={styles.TagLine}>
         <TagLine summary={props.summary} add={props.add} />
         <HorLine />
@@ -29,29 +33,33 @@ const homepage = (props) => {
       <aside className={styles.Profile}>
         <Profile />
       </aside>
+
       <aside className={styles.name}>
         <OwnerName />
       </aside>
+
       <aside className={styles.card1}>
         <Cards name={props.name1} pic={pic1} post="COO" />
       </aside>
+
       <aside className={styles.card2}>
         <Cards name={props.name2} pic={pic2} post="CTO Propulsion" />
       </aside>
+
       <aside className={styles.AboutHeading}>
         <OverView />
       </aside>
+
       <aside className={styles.summary}>
         <Summary summary={props.add} />
       </aside>
+
       <aside className={styles.keys}>
         <Keys reqData={props.reqData} />
       </aside>
-      <aside className={styles.values}>
-        <Values reqData={props.reqData} />
-      </aside>
+
       <footer className={styles.foot}>
-        <Footer/>
+        <Footer />
       </footer>
     </div>
   );

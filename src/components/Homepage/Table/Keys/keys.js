@@ -1,7 +1,6 @@
 import React from 'react' ; 
 import styles from './keys.css' ;
-import Key from './Key/Key' ; 
-
+ 
 const keys = (props) => {
      let obj = props.reqData ; 
      delete obj.headquarters ; 
@@ -9,16 +8,17 @@ const keys = (props) => {
      delete obj.id ;
      delete obj.summary ;  
     
-    
      const keys = Object.entries(obj) ;
      let htmlData = [] ; 
-    //  console.log(keys);
+
      keys.forEach(key=>{
-        htmlData.push(<Key id={key[0]} data={key[0].toUpperCase()}/>)
-     })
+        htmlData.push(<div id={key[0]} className={styles.key}>{key[0].toUpperCase()}</div>)
+        htmlData.push(<div id={key[1]}>{key[1]}</div>)
+    })
+    
     return (
-          <div className={styles.key}>  
-              <span className={styles.keyItem}>{htmlData}</span>
+          <div className={styles.container}>  
+              {htmlData}
           </div>
     ) ;
 }
