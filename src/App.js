@@ -6,7 +6,7 @@ import LaunchesData from './containers/LaunchesData/LaunchesData' ;
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import MapData from './containers/MapData/MapData' ;
 import LaunchDetailsData from './containers/LaunchesData/LaunchDetailsData' ;
-
+import Notification from './components/Notification/Notification' ; 
 class App extends Component {
   state = {
     loading: true,
@@ -30,6 +30,7 @@ class App extends Component {
              <Route path="/launches" exact component={Launches}/>
              <Route path="/launchDetails" component={LaunchDetailsData}/>
              <Route path="/Maps" component={MapData}/>
+             <Route path="/Notifications" component={Notification} />
           </Switch>
         </div>
       </Router>

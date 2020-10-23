@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400i,600");
+
+.nots{
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  padding-top: 15px;
+  height: 100vh;
+}
+.Notification {
+  text-align: center;
+  font-family: 'Lato';
+  margin: 0px;
+  /* overflow: hidden; */
+  
+}
+.mobileMenu{
+  padding: 15px 0 5px 0px;
+  height: 25px;
+  text-align: left;
+  margin-left: 5%;    
+  /* padding-bottom: 5%;   */
+}
+
+.nav{
+  /* padding: 2%; */
+}
+
+.Notification .chat {
+  position: relative;
+  display: inline-block;
+  width: 40vw ;
+  max-width: 60%;
+  animation: popFromBottom 0.5s ease-in-out;
+  
+}
+
+@keyframes popFromBottom {
+  0% {
+    transform: translateY(300px) scale(0);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.Notification .profile img {
+  height: 100% ; 
+  width: 100% ;
+}
+
+.Notification .profile {
+  display:  inline-block;
+  width: 22vmin ; 
+  border-radius:  50%;
+  overflow:  hidden;
+  position: absolute;
+  left: -16vmin;
+  top: -1vmin;
+  border: 1vmin solid #fff;
+}
+
+.Notification .message {
+  background: #ffe271;
+  padding: 2% 22px 12px 73px;
+  border-radius: 0px 50px 50px 0px;
+  font-size: 3vmin;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.Notification .user {
+  text-align: left;
+  padding: 2px 30px 5px 60px;
+  border-radius: 0px 0px 20px;
+  font-size: 2.5rem;
+  background: #fff;
+  color: #83aebd;
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@media (max-width : 600px){
+  .Notification{
+    margin-top: 15%;
+  }
+  .Notification .profile{
+    width: 50%;
+    left: -13vmin;
+  }
+  .Notification .chat{
+    width: min-content;
+  }
+  .Notification .message {
+    font-size: 3.5vmin;
+  }
+  
+}

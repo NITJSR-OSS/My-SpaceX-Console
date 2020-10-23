@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Navigation.css";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
+import { VscBell } from "react-icons/vsc";
+import { VscBellDot } from "react-icons/vsc";
 
 const nav = (props) => {
 
@@ -11,7 +13,9 @@ const nav = (props) => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link to="/" ><span>Home</span></Link>
+            <Link to="/">
+              <span>Home</span>
+            </Link>
           </li>
           <li>
             <Link to="/launches">Launches</Link>
@@ -20,7 +24,9 @@ const nav = (props) => {
             <Link to="/Maps">Maps</Link>
           </li>
           <li>
-            <Link to="/notifications">Notifications</Link>
+            <Link to="/Notifications" className={styles.dropdown}>
+              Notifications <VscBellDot />
+            </Link>
           </li>
         </ul>
       </nav>
