@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./Footer.css";
 import Logo from "../../../assets/LOGO.png";
+import {CgWebsite} from 'react-icons/cg' ;
+import {ImFlickr4} from 'react-icons/im' ; 
+import { Link } from "react-router-dom";
 
 const footer = (props) => {
   return (
@@ -8,23 +11,20 @@ const footer = (props) => {
       <div className={styles.footerLeft}>
         <img src={Logo} alt="logo" />
         <p className={styles.footerLinks}>
-          <a href="#">Home</a>·<a href="#">Launches</a>·<a href="#">Maps</a>·
+        <Link to="/"><span>Home</span></Link>·<Link to="/launches"><span>Launches</span></Link>·<Link to="/Maps"><span>Maps</span></Link>
         </p>
 
         <p className={styles.footerCompanyName}>SpaceX © 2002</p>
 
         <div className={styles.footerIcons}>
-          <a href="#" className={styles.facebook}>
-            <i class="fa fa-facebook"></i>
+          <a href="https://www.spacex.com/" className={styles.website}>
+            <i><CgWebsite/></i>
           </a>
-          <a href="#" className={styles.twitter}>
+          <a href="https://twitter.com/SpaceX" className={styles.twitter}>
             <i class="fa fa-twitter"></i>
           </a>
-          <a href="#" className={styles.linkedin}>
-            <i class="fa fa-linkedin"></i>
-          </a>
-          <a href="#" className={styles.dribbble}>
-            <i class="fa fa-dribbble"></i>
+          <a href="https://www.flickr.com/photos/spacex/" className={styles.flickr}>
+            <i><ImFlickr4/></i>
           </a>
         </div>
       </div>

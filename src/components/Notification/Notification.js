@@ -2,44 +2,69 @@ import React from "react";
 import styles from "./Notification.css";
 import Nav from "../Navigation/Navigation";
 import MobileMenu from "../Navigation/MobileMenu/MobileMenu";
-import thumbsup from '../../assets/thumbsup.png' ; 
+import thumbsup from "../../assets/thumbsup.png";
+import Footer from '../Homepage/Footer/Footer' ; 
 
 const Notification = (props) => {
-  let obj = localStorage.getItem("rocket");
-  obj = JSON.parse(obj);
-  let dropDownContent = [];
-  let image = thumbsup ; 
-  if (obj) {
-    let number = obj.RocketNumber;
-    let name = obj.RocketName;
-    let days = obj.RocketDays;
-    image = obj.RocketImage ; 
-    console.log(number, name);
-    dropDownContent.push(
-    <span>Flight Number {number},{name} is next to Launch within {days} days !!!</span>
-    );
-  } else {
-    dropDownContent.push(<span>No New Notification</span>);
+  
+  let objArray = [];
+  for (let i = 0; i < localStorage.length; i++) {
+    if (localStorage.key(i).match(/^(?:[0-9]+[a-z]|[a-z]+[0-9])[a-z0-9]*$/i)) {
+      let objkey = localStorage.key(i);
+      objArray.push(localStorage.getItem(objkey)) ;
+    }
   }
-
-  return (
-   <div className={styles.nots}>
-     <div className={styles.mobileMenu}><MobileMenu /></div>
-     <div className={styles.nav}><Nav /></div>
-    <div className={styles.Notification}>
+  console.log(objArray) ;
+  let Jsxcode = [];
+  if (objArray.length === 0) {
+    Jsxcode.push(
+      <div className={styles.Notification}>
       <div className={styles.chat}>
         <div className={styles.profile}>
-          <img
-            src={image}
-            alt=""
-          />
+          <img src={thumbsup} alt="" />
         </div>
         <div className={styles.message}>
-          {dropDownContent}
+          <span>No New Notification</span>
         </div>
       </div>
       </div>
-    </div>   
+    );
+  }
+  else{
+    objArray.map((key) => {
+      let keys = JSON.parse(key);
+      Jsxcode.push(
+        <div className={styles.Notification}>
+        <div className={styles.chat}>
+          <div className={styles.profile}>
+            <img src={keys.RocketImage} alt="" />
+          </div>
+          <div className={styles.message}>
+            <span>
+              Flight Number {keys.RocketNumber},{keys.RocketName} is next to Launch
+              within {keys.RocketDays} days !!!
+            </span>
+          </div>
+        </div>
+        </div>
+      );
+    });
+  }
+  
+
+  return (
+    <div className={styles.nots}>
+      <div className={styles.mobileMenu}>
+        <MobileMenu />
+      </div>
+      <div className={styles.nav}>
+        <Nav />
+      </div>
+      <div className={styles.jsxcode}>
+      {Jsxcode}
+      </div>
+      <Footer/>
+    </div>
   );
 };
 

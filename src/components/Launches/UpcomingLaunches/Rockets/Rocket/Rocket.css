@@ -17,8 +17,7 @@
 }
 
 .image:hover{
-    transform: scale(1.2);
-
+    transform: scale(1.1);
 }
 
 .name{
@@ -39,7 +38,7 @@
     width: 100%;
     color: grey;
     margin: 0;
-    padding: 0  ;
+    padding: 0;
 }
 
 .days{
@@ -48,6 +47,16 @@
     color: grey;
     margin: 0;
     padding: 0;
+}
+
+.trackIcon{
+   color: red;
+   font-size: 1.5rem;
+   transition: transform 0.2s;
+   margin-top: 5%;
+}
+.trackIcon:hover{
+    transform: scale(1.1);
 }
 
 @media (max-width:1000px){

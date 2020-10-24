@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import thumbnail1 from "../../../../../assets/thumbnail1.jpg";
 import thumbnail2 from "../../../../../assets/thumnail2.jpg";
 import thumbnail3 from "../../../../../assets/thumbnail3.jpg";
 import { Link } from "react-router-dom";
 import styles from "./Rocket.css";
+import { BsHeart } from "react-icons/bs";
+import { BsFillHeartFill } from "react-icons/bs";
 import Notification from "../../../../Notification/Notification";
 
 const Rocket = (props) => {
@@ -26,37 +28,79 @@ const Rocket = (props) => {
     image = arr[Math.floor(Math.random() * arr.length)];
   }
 
-  if(days<=5){
-    const obj = {
-      RocketName : name,
-      RocketNumber : number,
-      RocketDays : days,
-      RocketImage : image,
-    } 
-    localStorage.setItem('rocket',JSON.stringify(obj)) ; 
+  let initstate = false;
+  if (localStorage.getItem("rocket".concat(number))) {
+    initstate = true;
   }
-  
+  const [trackBtn, updatetrackBtn] = useState(initstate);
 
-  
+  if (trackBtn) {
+    let obj = {
+      RocketName: name,
+      RocketNumber: number,
+      RocketDays: days,
+      RocketImage: image,
+    };
+
+    obj = JSON.stringify(obj);
+    if (
+      !localStorage.getItem("rocket".concat(number)) ||
+      JSON.parse(localStorage.getItem("rocket".concat(number))).length === 0
+    ) {
+      localStorage.setItem("rocket".concat(number), obj);
+    }
+    // localStorage.setItem("rocket".concat(number), obj);
+  } else {
+    localStorage.removeItem("rocket".concat(number));
+  }
+
+  let present = false;
+  if (localStorage.getItem("rocket".concat(number))) {
+    present = true;
+  }
 
   return (
-    <div>
-      <Link to="/launchDetails" className={styles.links}>
+    <>
+      <div>
+        <Link to="/launchDetails" className={styles.links}>
+          <div className={styles.rocket}>
+            <img
+              className={styles.image}
+              src={image}
+              alt={image}
+              onClick={() => {
+                reactLocalStorage.set("count", props.id);
+              }}
+            />
+            <p
+              className={styles.name}
+              onClick={() => {
+                reactLocalStorage.set("count", props.id);
+              }}
+            >
+              {name}
+            </p>
+            <p
+              className={styles.number}
+              onClick={() => {
+                reactLocalStorage.set("count", props.id);
+              }}
+            >
+              {number}
+            </p>
+            <p className={styles.days}>
+              {days} days {props.timing}
+            </p>
+          </div>
+        </Link>
         <div
-          className={styles.rocket}
-          onClick={() => {
-            reactLocalStorage.set("count", props.id);
-          }}
+          className={styles.trackIcon}
+          onClick={() => updatetrackBtn(!trackBtn)}
         >
-          <img className={styles.image} src={image} alt={image} />
-          <p className={styles.name}>{name}</p>
-          <p className={styles.number}>{number}</p>
-          <p className={styles.days}>
-            {days} days {props.timing}
-          </p>
+          {trackBtn && present ? <BsFillHeartFill /> : <BsHeart />}
         </div>
-      </Link>
-    </div>
+      </div>
+    </>
   );
 };
 

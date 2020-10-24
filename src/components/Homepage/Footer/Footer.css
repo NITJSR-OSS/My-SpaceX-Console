@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 
 .footerDistributed {
-  background: #26262687;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   width: 100%;
@@ -31,6 +31,10 @@
   color: #ffffff;
   margin: 0 0 10px;
   padding: 0;
+}
+
+.footerLinks span:hover{
+  color: #fa027e
 }
 
 .footerLinks a {
@@ -70,23 +74,20 @@
   margin-bottom: 5px;
 }
 
-.footerIcons a.facebook:hover
+.footerIcons a.website:hover
 {
-  background-color:#3b5998
+  background-color:#384e04
 }
 .footerIcons a.twitter:hover
 {
   background-color:#00aced
 }
-.footerIcons a.linkedin:hover
+.footerIcons a.flickr:hover
 {
-  background-color:#007bb6
+  background-color: black ; 
 }
-.footerIcons a.dribbble:hover
-{
-  background-color:#ea4c89
-}
-/* Footer Right */
+
+
 
 .footerRight {
   float: right;
