@@ -3,7 +3,7 @@ import styles from "./Footer.css";
 import Logo from "../../../assets/LOGO.png";
 import { CgWebsite } from "react-icons/cg";
 import { ImFlickr4 } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const footer = (props) => {
   return (
@@ -11,17 +11,17 @@ const footer = (props) => {
       <div className={styles.footerLeft}>
         <img src={Logo} alt="logo" />
         <p className={styles.footerLinks}>
-          <Link to="/">
+          <NavLink to="/" activeStyle={{ color: "grey" }}>
             <span>Home</span>
-          </Link>
+          </NavLink>
           ·
-          <Link to="/launches">
+          <NavLink to="/launches" activeStyle={{ color: "yellow" }}>
             <span>Launches</span>
-          </Link>
+          </NavLink>
           ·
-          <Link to="/Maps">
+          <NavLink to="/Maps" activeStyle={{ color: "yellow" }}>
             <span>Maps</span>
-          </Link>
+          </NavLink>
         </p>
 
         <p className={styles.footerCompanyName}>SpaceX © 2002</p>

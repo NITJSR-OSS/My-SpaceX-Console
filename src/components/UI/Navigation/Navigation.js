@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Navigation.css";
 import Logo from "../../UI/Logo/Logo";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { VscBellDot } from "react-icons/vsc";
 
 const nav = (props) => {
@@ -11,20 +11,28 @@ const nav = (props) => {
       <nav className={styles.nav}>
         <ul>
           <li>
-            <Link to="/">
-              <span>Home</span>
-            </Link>
+            <NavLink to="/" activeStyle={{ color: "grey" }}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/launches">Launches</Link>
+            <NavLink to="/launches" activeStyle={{ color: "yellow" }}>
+              Launches
+            </NavLink>
           </li>
           <li>
-            <Link to="/Maps">Maps</Link>
+            <NavLink to="/Maps" activeStyle={{ color: "yellow" }}>
+              Maps
+            </NavLink>
           </li>
           <li>
-            <Link to="/Notifications" className={styles.dropdown}>
+            <NavLink
+              to="/Notifications"
+              className={styles.dropdown}
+              activeStyle={{ color: "yellow" }}
+            >
               Notifications <VscBellDot />
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

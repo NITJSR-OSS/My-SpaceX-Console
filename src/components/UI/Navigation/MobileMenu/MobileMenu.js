@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MobileMenu.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const MobileMenu = () => {
   return (
@@ -15,16 +15,27 @@ const MobileMenu = () => {
               <span></span>
               <ul className={styles.menu}>
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink to="/" activeStyle={{ color: "grey" }}>
+                    Home
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/launches">Launches</Link>
+                  <NavLink to="/launches" activeStyle={{ color: "yellow" }}>
+                    Launches
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/Maps">Maps</Link>
+                  <NavLink to="/Maps" activeStyle={{ color: "yellow" }}>
+                    Maps
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/notifications">Notifications</Link>
+                  <NavLink
+                    to="/notifications"
+                    activeStyle={{ color: "yellow" }}
+                  >
+                    Notifications
+                  </NavLink>
                 </li>
               </ul>
             </div>

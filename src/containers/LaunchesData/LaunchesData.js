@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Launches from "../../components/Launches/Launches";
+import LoadingSpinner from "../../components/UI/LoadingSpinner/LoadingSpinner";
 
 class LaunchesData extends Component {
   state = {
@@ -9,6 +10,7 @@ class LaunchesData extends Component {
     isLoadedFuture: false,
     isLoadedPast: false,
     isLoadedPresent: true,
+    error: false,
   };
 
   data = {
@@ -27,6 +29,11 @@ class LaunchesData extends Component {
           UpcomingLaunches: updatedUpcomingLaunches,
           isLoadedFuture: true,
         });
+      })
+      .catch((error) => {
+        this.setState({
+          error: true,
+        });
       });
 
     axios
@@ -38,6 +45,11 @@ class LaunchesData extends Component {
           isLoadedPresent: true,
         });
         return;
+      })
+      .catch((error) => {
+        this.setState({
+          error: true,
+        });
       });
 
     axios
@@ -48,6 +60,11 @@ class LaunchesData extends Component {
         this.setState({
           PastLaunches: updatedPastLaunches,
           isLoadedPast: true,
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          error: true,
         });
       });
   }
@@ -60,7 +77,11 @@ class LaunchesData extends Component {
       isLoadedFuture,
       isLoadedPast,
       isLoadedPresent,
+      error,
     } = this.state;
+    if (error) {
+      return <h1>Network Error..Please Refresh your Page</h1>;
+    }
     if (isLoadedFuture && isLoadedPast && isLoadedPresent) {
       return (
         <>
@@ -72,7 +93,7 @@ class LaunchesData extends Component {
         </>
       );
     } else {
-      return <h1>...Loading</h1>;
+      return <LoadingSpinner />;
     }
   }
 }

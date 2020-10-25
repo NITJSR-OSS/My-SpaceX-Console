@@ -23,7 +23,7 @@ const Notification = (props) => {
             <img src={thumbsup} alt="" />
           </div>
           <div className={styles.message}>
-            <span>No New Notification</span>
+            <span>No New Notification..Please Mark some launches to track</span>
           </div>
         </div>
       </div>
@@ -39,8 +39,8 @@ const Notification = (props) => {
             </div>
             <div className={styles.message}>
               <span>
-                Flight Number {keys.RocketNumber},{keys.RocketName} is next to
-                Launch within {keys.RocketDays} days !!!
+                Flight Number <strong>{keys.RocketNumber}</strong>,<strong>{keys.RocketName}</strong> is next to
+                Launch within <strong>{keys.RocketDays}</strong> days !!!
               </span>
             </div>
           </div>
@@ -50,6 +50,7 @@ const Notification = (props) => {
   }
 
   return (
+    <>
     <div className={styles.nots}>
       <div className={styles.mobileMenu}>
         <MobileMenu />
@@ -58,8 +59,9 @@ const Notification = (props) => {
         <Nav />
       </div>
       <div className={styles.jsxcode}>{Jsxcode}</div>
-      <Footer />
     </div>
+    <Footer/>
+    </>
   );
 };
 

@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "./keys.css";
 
-const Keys = (props) => {
+const keys = (props) => {
   let obj = props.reqData;
-  let key = obj.id;
-  delete obj.id;
   delete obj.headquarters;
   delete obj.links;
+  delete obj.id;
   delete obj.summary;
 
   const keys = Object.entries(obj);
@@ -14,7 +13,7 @@ const Keys = (props) => {
 
   keys.forEach((key) => {
     htmlData.push(
-      <div key={String(key[0]).concat(Math.random())} className={styles.key}>
+      <div className={styles.key} key={String(key[0]).concat(Math.random())}>
         {key[0].toUpperCase()}
       </div>
     );
@@ -22,11 +21,7 @@ const Keys = (props) => {
       <div key={String(key[1]).concat(Math.random())}>{key[1]}</div>
     );
   });
-  
-  return (
-    <div className={styles.container} key={key}>
-      {htmlData}
-    </div>
-  );
+
+  return <div className={styles.container}>{htmlData}</div>;
 };
-export default Keys;
+export default keys;

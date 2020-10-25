@@ -5,8 +5,8 @@
 .map {
   height: 100vh;
   width: 80%;
-  border: 25px solid #082340;
-  border-radius: 20px;
+  border: 10px solid #082340;
+  border-radius: 50px;
   margin-bottom: 2%;
 }
 
