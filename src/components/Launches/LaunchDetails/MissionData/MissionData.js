@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./MissionData.css";
-import Heading from "../../UpcomingLaunches/UpcomingLaunchesHeading/UpcomingLaunchesHeading";
-import ListItems from "./ListItems/ListItems";
+import Heading from "../../../UI/Heading/Heading";
+
 
 const missionData = (properties) => {
   let props = properties.props;
@@ -10,13 +10,12 @@ const missionData = (properties) => {
   var date = new Date(dateUTC);
   let exactDate = date.toUTCString();
   let flightnumber = props.flight_number;
-  let success = props.success ? 'Yes' : 'No' ;
-  // let auto_update = props.auto_update ? 'Yes' : 'No' ;
-  let window = props.window ? 'Yes' : 'No' ;
-  let net = props.net ? 'Yes' : 'No' ;
-  let tdb = props.tdb ? 'Yes' : 'No' ;
-  let summary = props.details ; 
-  
+  let success = props.success ? "Yes" : "No";
+  let window = props.window ? "Yes" : "No";
+  let net = props.net ? "Yes" : "No";
+  let tdb = props.tdb ? "Yes" : "No";
+  let summary = props.details;
+
   return (
     <div className={styles.missionData}>
       <div className={styles.heading}>

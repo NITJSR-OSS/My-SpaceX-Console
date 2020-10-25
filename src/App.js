@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PreLoader from "./components/PreLoader/Preloader";
+import PreLoader from "./components/UI/PreLoader/Preloader";
 import styles from "./App.css";
 import MySpaceX from "./containers/MySpaceX/MySpaceX";
 import LaunchesData from './containers/LaunchesData/LaunchesData' ; 

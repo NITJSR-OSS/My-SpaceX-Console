@@ -1,6 +1,6 @@
 import React from 'react' ; 
 import styles from './OverView.css' ; 
-import Heading from '../../Launches/UpcomingLaunches/UpcomingLaunchesHeading/UpcomingLaunchesHeading' ; 
+import Heading from '../../UI/Heading/Heading' ; 
 
 const overview = (props) => {
    return (

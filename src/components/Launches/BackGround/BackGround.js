@@ -1,6 +1,5 @@
 import React from "react";
 import "./BackGround.scss";
-// import Launches from '../Launches' ; 
 
 const BackGround = () => {
   return (

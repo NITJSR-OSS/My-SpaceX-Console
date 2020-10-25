@@ -1,5 +1,5 @@
 import React from 'react';
-import ElonMusk from '../../../assets/ElonMusk4.jpg';
+import ElonMusk from '../../../assets/ElonMusk.png';
 import styles from './ProfileCard.css'
 
 const profile = (props) => {

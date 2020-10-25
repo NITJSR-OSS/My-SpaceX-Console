@@ -16,18 +16,12 @@
   text-align: center;
   font-family: "Lato";
   margin: 5vh;
-  /* overflow: hidden; */
 }
 .mobileMenu {
   padding: 15px 0 5px 0px;
   height: 25px;
   text-align: left;
   margin-left: 5%;
-  /* padding-bottom: 5%;   */
-}
-
-.nav {
-  /* padding: 2%; */
 }
 
 .Notification .chat {
@@ -72,32 +66,18 @@
   width: min-content;
 }
 
-/* .Notification .user {
-  text-align: left;
-  padding: 2px 30px 5px 60px;
-  border-radius: 0px 0px 20px;
-  font-size: 2.5rem;
-  background: #fff;
-  color: #83aebd;
-  display: inline-block;
-  float: left;
-  font-weight: 600;
-  font-style: normal;
-} */
-
 @media (max-width: 600px) {
   .jsxcode {
     margin-top: 1vh;
   }
   .Notification {
-    /* margin-top: 15%; */
     margin: 3vh;
   }
   .Notification .profile {
     width: 60%;
     left: -11vmin;
   }
-  
+
   .Notification .message {
     padding: 4% 22px 12px 60px;
     font-size: 3.5vmin;

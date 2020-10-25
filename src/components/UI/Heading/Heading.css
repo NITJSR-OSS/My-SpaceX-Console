@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.UpcomingLaunchesHeading {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.Line {
+  height: 10%;
+  width: 30%;
+  background-color: yellow;
+  display: inline-block;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 70px;
+  letter-spacing: 10px;
+}
+
+.title span {
+  background: -webkit-linear-gradient(white, #38495a);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 40px;
+    letter-spacing: normal;
+  }
+}
+@media (max-width: 370px) {
+  .title {
+    font-size: 35px;
+    text-align: left;
+    letter-spacing: normal;
+  }
+}

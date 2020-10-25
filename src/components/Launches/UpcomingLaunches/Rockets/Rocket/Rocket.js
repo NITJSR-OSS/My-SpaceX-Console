@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { reactLocalStorage } from "reactjs-localstorage";
 import thumbnail1 from "../../../../../assets/thumbnail1.jpg";
 import thumbnail2 from "../../../../../assets/thumnail2.jpg";
@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import styles from "./Rocket.css";
 import { BsHeart } from "react-icons/bs";
 import { BsFillHeartFill } from "react-icons/bs";
-import Notification from "../../../../Notification/Notification";
 
 const Rocket = (props) => {
   let name = props.name;
@@ -16,7 +15,6 @@ const Rocket = (props) => {
 
   var currentTime = Math.round(new Date().getTime() / 1000);
   var Rockettime = props.time;
-  console.log(Rockettime);
   var timeLeft = Math.abs(Rockettime - currentTime);
   var days = Math.round(timeLeft / (60 * 60 * 24));
 
@@ -49,7 +47,6 @@ const Rocket = (props) => {
     ) {
       localStorage.setItem("rocket".concat(number), obj);
     }
-    // localStorage.setItem("rocket".concat(number), obj);
   } else {
     localStorage.removeItem("rocket".concat(number));
   }

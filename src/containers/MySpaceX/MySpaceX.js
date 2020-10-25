@@ -21,7 +21,6 @@ class MySpaceX extends Component {
   }
 
   render() {
-
     return (
       <Homepage
         company={this.state.infos.name}

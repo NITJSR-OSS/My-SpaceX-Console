@@ -3,10 +3,10 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import styles from "./Maps.css";
-import Nav from "../Navigation/Navigation";
-import Footer from "../Homepage/Footer/Footer";
-import Heading from "../Launches/UpcomingLaunches/UpcomingLaunchesHeading/UpcomingLaunchesHeading";
-import MobileMenu from '../Navigation/MobileMenu/MobileMenu' ; 
+import Nav from "../UI/Navigation/Navigation";
+import Footer from "../UI/Footer/Footer";
+import Heading from "../UI/Heading/Heading";
+import MobileMenu from "../UI/Navigation/MobileMenu/MobileMenu";
 
 const arr = [];
 arr.push(
@@ -75,6 +75,7 @@ class Maps extends Component {
         <Marker
           position={[this.state.lat[i], this.state.lng[i]]}
           icon={arr[Math.floor(Math.random() * arr.length)]}
+          key={this.state.name[i]}
         >
           <Popup>{this.state.name[i]}</Popup>
         </Marker>

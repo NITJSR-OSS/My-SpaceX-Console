@@ -1,6 +1,6 @@
 import React from 'react' ; 
 import styles from './TagLine.css' ; 
-import Heading from '../../Launches/UpcomingLaunches/UpcomingLaunchesHeading/UpcomingLaunchesHeading' ; 
+import Heading from '../../UI/Heading/Heading' ; 
 
 const tagLine = (props) => {
     let str = String(props.add) ;

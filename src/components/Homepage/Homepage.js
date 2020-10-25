@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Homepage.css";
 import Profile from "./ProfileCard/ProfileCard";
-import Logo from "../Logo/Logo";
 import HorLine from "./HorLine/HorLine";
 import TagLine from "./TagLine/TagLine";
 import OwnerName from "./OwnerName/OwnerName";
@@ -11,20 +10,20 @@ import pic2 from "../../assets/pic2.jpg";
 import OverView from "./OverView/OverView";
 import Summary from "./Summary/Summary";
 import Keys from "./Table/Keys/keys";
-import Footer from "./Footer/Footer";
-import Nav from "../Navigation/Navigation";
-import MobileMenu from '../Navigation/MobileMenu/MobileMenu';
+import Footer from '../UI/Footer/Footer';
+import Nav from "../UI/Navigation/Navigation";
+import MobileMenu from "../UI/Navigation/MobileMenu/MobileMenu";
 
 const homepage = (props) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.mobileMenu}>
-         <MobileMenu/>
+        <MobileMenu />
       </div>
       <header className={styles.NavLogo}>
         <Nav />
       </header>
-       
+
       <article className={styles.TagLine}>
         <TagLine summary={props.summary} add={props.add} />
         <HorLine />

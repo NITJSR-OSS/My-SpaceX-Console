@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Launches from "../../components/Launches/Launches";
-import Notification from '../../components/Notification/Notification' ;
+
 class LaunchesData extends Component {
   state = {
     UpcomingLaunches: [],
@@ -21,7 +21,6 @@ class LaunchesData extends Component {
     axios
       .get("https://api.spacexdata.com/v4/launches/upcoming")
       .then((response) => {
-        // console.log(response);
         const data = response.data;
         const updatedUpcomingLaunches = [...data];
         this.setState({
@@ -29,11 +28,10 @@ class LaunchesData extends Component {
           isLoadedFuture: true,
         });
       });
-    // console.log(this.state.UpcomingLaunches) ;
+
     axios
       .get("https://api.spacexdata.com/v4/launches/latest")
       .then((response) => {
-        // console.log(response) ;
         const data = response.data;
         this.setState({
           LatestLaunches: data,
@@ -45,9 +43,8 @@ class LaunchesData extends Component {
     axios
       .get("https://api.spacexdata.com/v4/launches/past")
       .then((response) => {
-        // console.log(response);
         const data = response.data;
-        const updatedPastLaunches = [...data] ;
+        const updatedPastLaunches = [...data];
         this.setState({
           PastLaunches: updatedPastLaunches,
           isLoadedPast: true,
@@ -67,11 +64,11 @@ class LaunchesData extends Component {
     if (isLoadedFuture && isLoadedPast && isLoadedPresent) {
       return (
         <>
-        <Launches
-          future={UpcomingLaunches}
-          past={PastLaunches}
-          present={LatestLaunches}
-        />
+          <Launches
+            future={UpcomingLaunches}
+            past={PastLaunches}
+            present={LatestLaunches}
+          />
         </>
       );
     } else {
