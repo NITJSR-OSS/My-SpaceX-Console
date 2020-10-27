@@ -7,8 +7,8 @@ import '../css/launches.css'
 
 export default function Launches() {
     return (
-        <>
-        <h1>Launches</h1>
+        
+       
 
         <div className='launches-box'>
             
@@ -17,6 +17,6 @@ export default function Launches() {
             <UpcomingLaunches />
                    
         </div>
-        </>
+        
     )
 }
