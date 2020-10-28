@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.detailsContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 10%;
+  margin-left: 4%;
+  margin-right: 7%;
+  margin-bottom: 4%;
+  padding-left: 7%;
+  border-left: 4px solid blueviolet;
+}
+
+.detailsContainer div {
+  font-size: 2rem;
+  font-family: "lato", sans-serif;
+  color: aliceblue;
+  align-items: center;
+  display: flex;
+  /* flex-wrap: wrap;  */
+  text-align: left;
+  margin: 0.5%;
+  padding: 4px;
+  word-wrap: break-word;
+}
+
+.detailsContainer div a {
+  text-decoration: none;
+  transition: transform 0.2s;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.detailsContainer div a:hover {
+  transform: scaleY(1.1);
+}
+
+.key {
+  background: -webkit-linear-gradient(white, #ffcc86);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 1%;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .detailsContainer div {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 900px) {
+  .detailsContainer div {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 500px) {
+  .detailsContainer div {
+    font-size: 1.2rem;
+  }
+}

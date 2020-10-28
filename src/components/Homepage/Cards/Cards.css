@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.name{
+    margin: 10px 0;
+}
+
+.cfo{
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.cardContainer {
+	color: #B3B8CD;
+	padding-top: 30px;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.round {
+	border: 3px solid #03BFCB;
+	width: 60%;
+	height: auto;
+	border-radius: 50%;
+	padding: 7px;
+	
+}
+
+@media (max-width: 500px){
+	.round{
+		width: 50%;
+	}
+	.name{
+		font-size: large;
+	}
+}
+
+
+

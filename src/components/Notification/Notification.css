@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400i,600");
+
+.nots {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  padding-top: 15px;
+  height: 100vh;
+}
+
+.jsxcode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Notification {
+  text-align: center;
+  font-family: "Lato";
+  margin: 5vh;
+}
+.mobileMenu {
+  padding: 15px 0 5px 0px;
+  height: 25px;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.Notification .chat {
+  position: relative;
+  display: inline-block;
+  max-width: 60%;
+  animation: popFromBottom 0.5s ease-in-out;
+}
+
+@keyframes popFromBottom {
+  0% {
+    transform: translateY(300px) scale(0);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.Notification .profile img {
+  height: 100%;
+  width: 100%;
+}
+
+.Notification .profile {
+  display: inline-block;
+  width: 22vmin;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: -16.5vmin;
+  top: -1vmin;
+  border: 1vmin solid #fff;
+}
+
+.Notification .message {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  padding: 3% 22px 12px 90px;
+  border-radius: 50px 50px 50px 50px;
+  font-size: 3vmin;
+  text-align: left;
+  letter-spacing: 2px;
+  width: min-content;
+}
+
+@media (max-width: 600px) {
+  .jsxcode {
+    margin-top: 1vh;
+  }
+  .Notification {
+    margin: 3vh;
+  }
+  .Notification .profile {
+    width: 60%;
+    left: -11vmin;
+  }
+
+  .Notification .message {
+    padding: 4% 22px 12px 60px;
+    font-size: 3.5vmin;
+  }
+}

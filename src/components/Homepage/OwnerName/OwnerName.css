@@ -1,0 +1,52 @@
+.name {
+  font-size: 100px;
+  font-family: "Cooper Black";
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+.OwnerName p{
+  margin: 1%;
+}
+
+.Elon{
+  color: rgb(254, 55, 2);
+}
+.Musk{
+  color: white;
+}
+
+.who{
+  color: rgb(1, 255, 13);
+  font-family: "Gadugi";
+  font-size: 48px;
+  font-weight: bolder;
+  margin: 0px;
+}
+
+
+@media (max-width:768px){
+  .name{
+    font-size: 80px;
+  }
+  .who{
+     font-size: 40px;
+  }
+}
+
+@media (max-width : 500px){
+.name{
+  font-size: 60px;
+}
+.who{
+  font-size: 35px;
+}
+}
+@media (max-width : 370px){
+.name{
+  font-size: 50px;
+}
+.who{
+  font-size: 22px;
+}
+}

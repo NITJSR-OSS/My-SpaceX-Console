@@ -1,0 +1,71 @@
+.links {
+  text-decoration: none;
+}
+.rocket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  text-decoration: none;
+}
+.image {
+  border-radius: 50%;
+  width: 200px;
+  margin: 1rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.image:hover {
+  transform: scale(1.1);
+}
+
+.name {
+  color: white;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.name:hover {
+  color: yellow;
+  transform: scale(1.3);
+}
+
+.number {
+  text-align: center;
+  width: 100%;
+  color: grey;
+  margin: 0;
+  padding: 0;
+}
+
+.days {
+  text-align: center;
+  width: 100%;
+  color: grey;
+  margin: 0;
+  padding: 0;
+}
+
+.trackIcon {
+  color: red;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+  margin-top: 5%;
+}
+.trackIcon:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+  .image {
+    width: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .image {
+    width: 150px;
+  }
+}

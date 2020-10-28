@@ -1,0 +1,18 @@
+.launchDetails {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.rocket {
+  margin-bottom: 4%;
+}
+.mobileMenu {
+  padding: 15px 0 5px 0px;
+  height: 25px;
+  text-align: left;
+  margin-left: 5%;
+}

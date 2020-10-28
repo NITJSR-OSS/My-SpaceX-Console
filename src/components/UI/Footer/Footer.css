@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+.footerDistributed {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  font: bold 26px sans-serif;
+  text-align: left;
+  padding: 50px 60px 40px;
+  overflow: hidden;
+}
+
+.footerLeft {
+  float: left;
+}
+
+.footerDistributed img {
+  width: 315px;
+  height: auto;
+}
+
+.footerLinks {
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footerLinks span:hover {
+  color: #fa027e;
+}
+
+.footerLinks a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footerCompanyName {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footerIcons {
+  margin-top: 40px;
+}
+
+.footerIcons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footerIcons a.website:hover {
+  background-color: #384e04;
+}
+.footerIcons a.twitter:hover {
+  background-color: #00aced;
+}
+.footerIcons a.flickr:hover {
+  background-color: black;
+}
+
+.footerRight {
+  float: right;
+}
+
+.footerRight p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px 17px 0 0;
+  color: #ffffff;
+}
+
+.footerRight .type {
+  color: #08d3f4;
+}
+
+.addressLine {
+  display: flex;
+  text-align: left;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+}
+
+.footerDistributed ::-webkit-input-placeholder {
+  color: #5c666b;
+}
+
+.footerDistributed ::-moz-placeholder {
+  color: #5c666b;
+  opacity: 1;
+}
+
+.footerDistributed :-ms-input-placeholder {
+  color: #5c666b;
+}
+
+@media (max-width: 1000px) {
+  .footerDistributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footerCompanyName {
+    font-size: 12px;
+  }
+
+  @media (max-width: 800px) {
+    .footerDistributed {
+      padding: 30px;
+    }
+
+    .footerLeft,
+    .footerRight {
+      float: none;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .footerLeft {
+      margin-bottom: 40px;
+    }
+  }
+}

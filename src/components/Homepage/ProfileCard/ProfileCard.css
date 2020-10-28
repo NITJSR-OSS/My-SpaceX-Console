@@ -1,0 +1,22 @@
+.card {
+  padding: 0;
+  height: auto;
+}
+
+.card img {
+  width: 750px;
+}
+
+@media (max-width : 1000px){
+  .card img{
+    width: 550px;
+    height: auto;
+  }
+}
+
+@media (max-width:500px){
+  .card img{
+    width: 330px;
+    height: auto;
+  }
+}
