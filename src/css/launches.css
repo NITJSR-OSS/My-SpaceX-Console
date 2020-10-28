@@ -1,0 +1,82 @@
+/* -------------------launches screen---------------------------------------- */
+
+.launches-box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1em;
+  
+  }
+  
+  .launches{
+    height: 80vh;
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 2em;
+    max-width: 93%;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 10px 1em;
+    background-color:#22132298;
+  }
+  .launches h1{
+    text-transform: uppercase;
+    padding: 10px .2em;
+    align-items: center;
+    color: rgb(235, 235, 5);
+  }
+  .launches-scrollbox{
+    height: 100%;
+    overflow:auto;
+    
+    
+  }
+  .launches li{
+    list-style-type: none;
+   
+    background-color: #030207;
+
+    
+    border-bottom: 2 px solid blue;
+    padding: 10px;
+    display: flex;
+    
+    align-items: center;
+  }
+
+  .launches a{
+    text-decoration: none;
+     color: white;
+     display: block;
+     margin-top: 3px;
+  }
+.tile-logo{
+  display: inline;
+  height: 100%;
+  margin: 0cm;
+}
+.tile-logo img{
+  height: 2em;
+ 
+  margin: 0;
+  padding: 0;
+}
+.tile-title{
+  margin-left: .7em;
+}
+.failed{
+  color: red;
+}
+.success{
+  color: green;
+}
+
+@media only screen and (max-width: 700px){
+  .launches-box{
+    flex-direction: column;
+    width: 100%;
+   align-items: center;
+   padding-bottom: 1.5em;
+  }
+}

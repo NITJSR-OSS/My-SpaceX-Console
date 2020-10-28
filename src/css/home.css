@@ -1,0 +1,46 @@
+.home{
+  
+     height: 90vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+    
+}
+.home p{
+ color: white;
+ font-size: 2em;
+ margin-top: 5vh;
+
+ 
+}
+p.greating{
+    color: wheat;
+    font-size: 2em;
+
+}
+.logo{
+    max-width: 80%;
+    transform: translateX(2em);
+    
+}
+.button{
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    border: 3px solid #007FFF;
+    margin-top: 1em;
+    display: block;
+    padding: .5em;
+}
+
+@media only screen and (max-width: 700px){
+    .home p{
+     padding: .5em;
+    }
+    .home{
+        width: 100%;
+    }
+  }
+
+  

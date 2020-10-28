@@ -1,0 +1,29 @@
+.loading-box{
+    width: 100%;
+    height: 2em;
+    display: flex;
+    background-color: ;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+}
+.loading-conponents{
+    background-color: #007FFF;
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+    margin: .2em;
+    animation-name: loading;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    animation-timing-function: ease-in-out;
+
+}
+.loading1{animation-delay: .3s;}
+.loading2{animation-delay: .6s;}
+.loading3{animation-delay: .9s;}
+@keyframes loading {
+    from {width: .6em;height: .6em;}
+    to {width: 1.5em;height: 1.5em;}
+  }
