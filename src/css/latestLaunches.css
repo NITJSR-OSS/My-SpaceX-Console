@@ -1,0 +1,30 @@
+.latest-launches-title{
+    color: white;
+    font-size: 1.3em;
+}
+.latest-launches{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.new{
+    display: inline-block;
+    background-color: red;
+    padding: .2em .4em;
+    border-radius: 1em;
+
+}
+.latest-launches img{
+    padding-top: 1em;
+    width: 40%;
+}
+p.details{
+    overflow: auto;
+    font-size: .8em;
+    color: antiquewhite;
+}
+@media only screen and (max-width: 700px){
+    
+  }

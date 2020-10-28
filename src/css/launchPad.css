@@ -1,0 +1,27 @@
+.leaflet-container {
+    
+
+    width: calc(100% - 2em);
+    margin: 1em;
+    height: calc(90vh - 2em);
+    padding: 1em;
+    border: 2px solid #007FFF;
+    border-radius: 2.5em 0em;
+    
+
+   
+
+    
+  }
+
+  .leaflet-control{
+      z-index: -1 !important;
+  }
+  .red{
+    text-transform: uppercase;
+    color: red;
+  }
+  .green{
+    text-transform: uppercase;
+    color: green;
+  }
